@@ -1,12 +1,24 @@
 # API Documentation
 
-[Live Demo](https://sis-shonei.herokuapp.com/)
+[Live Demo](https://shonei-comp3011.herokuapp.com/)
 
-## /get/salt/{user} [GET]
+## /addpayment [POST]
+It expects a JSON that hols the url that needs to be added.
 
+Example of the body:
+```json
+{
+  "url" : "a valid url"
+}
+```
 
-## /get/token/{user} [GET]
+## /removepayment [DELETE]
+It removes a given url. The url that is to be removed is passed as a query parameter. The parameter needs to be named 'url'.
 
+Example of the request:
+```
+/removepayment?url=http://www.google.com
+```
 
-## /get/student/profile/{user} [GET]
-This endpoint returns the personal information of the student. This is only accessible if you are student or part of the School of computing staff.
+## /getpayments [GET]
+Takes no paramaters and returns an array of all the urls.
