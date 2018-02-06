@@ -1,6 +1,6 @@
 # API Documentation
 
-##URL: https://shonei-comp3011.herokuapp.com
+## URL: https://shonei-comp3011.herokuapp.com
 
 ## /addpayment [POST]
 It expects a JSON that hols the url that needs to be added.
