@@ -27,7 +27,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/addpayment", add).Methods("GET")
+	r.HandleFunc("/addpayment", add).Methods("POST")
 	r.HandleFunc("/removepayment", remove).Methods("DELETE")
 	r.HandleFunc("/getpayments", get).Methods("GET")
 
