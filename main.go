@@ -47,16 +47,16 @@ func test() http.Handler {
 
 func add(w http.ResponseWriter, r *http.Request) {
 	vars := r.URL.Query()
-	url := vars.Get("url")
+	URL := vars.Get("url")
 		
-	if _, err := url.ParseRequestURI(url); err != nil {
+	if _, err := url.ParseRequestURI(URL); err != nil {
 		log.Println(err)
 		http.Error(w, "Invalid URL.", http.StatusBadRequest)
 		return
 	}
 
 	query := "INSERT INTO paymethods(url) VALUES($1);"
-	if _, err := db.Query(query, url); err != nil {
+	if _, err := db.Query(query, URL); err != nil {
 		log.Println(err)
 		http.Error(w, "We coundn't update the database at the moment.", http.StatusInternalServerError)
 		return
