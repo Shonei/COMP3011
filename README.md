@@ -1,15 +1,13 @@
 # API Documentation
 
-## URL: https://shonei-comp3011.herokuapp.com
+### URL: https://shonei-comp3011.herokuapp.com
 
 ## /addpayment [POST]
-It expects a JSON that hols the url that needs to be added.
+Adds a new payment method. The new URL needs to be passed as a parameter and be named 'url'.
 
-Example of the body:
-```json
-{
-  "url" : "a valid url"
-}
+Example of the request:
+```
+/addpayment?url=http://www.google.com
 ```
 
 ## /removepayment [DELETE]
